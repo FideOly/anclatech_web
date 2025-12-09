@@ -1,0 +1,365 @@
+/* --- Reseteo básico --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Fuente general y fondo claro --- */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Tipografía escalable: 16–18px según pantalla */
+  font-size: clamp(16px, 1.4vw, 18px);
+}
+
+/* --- Enlace de salto para accesibilidad --- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus,
+.skip-link:active {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: #003366;
+  color: #fff;
+  z-index: 10000;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* --- Indicadores de foco visibles para teclado --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+.btn-servicio:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+/* --- Modo oscuro --- */
+body.modo-oscuro {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* --- Encabezado --- */
+header {
+  background: linear-gradient(135deg, #005599, #003366); /* Degradado moderno */
+  color: white;
+  padding: 40px; /* Más espacio para aire visual */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* --- Logo --- */
+.logo {
+  width: 180px; /* Tamaño más grande para destacar */
+  height: auto;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+  padding: 15px; /* Espaciado interno para separar el logotipo del fondo */
+  border-radius: 50%; /* Bordes redondeados para un diseño moderno */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.2); /* Efecto de escala al pasar el cursor */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Sombra más intensa al pasar el cursor */
+}
+
+/* --- Título del encabezado --- */
+header h1 {
+  font-size: 3rem; /* Tamaño más grande para el título */
+  margin: 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 3px; /* Espaciado entre letras para un diseño más limpio */
+}
+
+/* --- Navegación --- */
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #005599;
+}
+
+/* --- Botón de modo oscuro --- */
+#modoToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#modoToggle:hover {
+  transform: scale(1.2);
+}
+
+/* --- Sección principal --- */
+main {
+  flex-grow: 1;
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+main h2 {
+  margin-bottom: 10px;
+  color: #003366;
+  font-size: 2rem;
+}
+
+body.modo-oscuro main h2 {
+  color: #59aaff;
+}
+
+/* --- Pie de página --- */
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* --- Botón flotante de WhatsApp --- */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 28px;
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+  background-color: #128c7e;
+}
+
+/* --- Animaciones --- */
+.animate-header {
+  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
+}
+
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Efecto de fade-in --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Tarjetas de Servicios --- */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.servicio-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.servicio-card i {
+  font-size: 2.5rem;
+  color: #004477;
+  margin-bottom: 1rem;
+}
+
+.servicio-card:hover i {
+  color: #0077cc;
+}
+
+/* --- Sección de Servicios --- */
+.servicios {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+}
+
+.servicios h2 {
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.servicios p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* --- Botón en las tarjetas --- */
+.btn-servicio {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-servicio:hover {
+  background-color: #005599;
+}
+
+/* --- Ajustes responsive y de lectura --- */
+@media (max-width: 900px) {
+  header {
+    padding: 28px;
+  }
+  .logo {
+    width: 140px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  main {
+    padding: 20px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 18px;
+  }
+  .logo {
+    width: 120px;
+  }
+  header h1 {
+    font-size: 1.6rem;
+  }
+  main {
+    padding: 16px;
+  }
+}
+
+/* Aumentar legibilidad en grandes pantallas */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1100px;
+  }
+}
+
+/* --- Banner de cookies --- */
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  background: rgba(0, 51, 102, 0.98);
+  color: #fff;
+  padding: 14px 16px;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  z-index: 2000;
+}
+.cookie-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+}
+.cookie-inner p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #f0f6fb;
+}
+.cookie-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.cookie-link {
+  color: #cfe8ff;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 520px) {
+  .cookie-inner { flex-direction: column; align-items: flex-start; }
+  .cookie-actions { width: 100%; justify-content: flex-start; }
+}
