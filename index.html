@@ -3,41 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AnclaTech Solutions</title>
+  <meta name="description" content="AnclaTech Solutions: Soluciones tecnológicas con precisión, eficiencia y compromiso. Desarrollo web, protección de datos y hosting desde Puerto Vallarta.">
+  <meta name="keywords" content="desarrollo web, soluciones tecnológicas, hosting, protección de datos, Puerto Vallarta">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AnclaTech Solutions - Soluciones Tecnológicas">
+  <meta property="og:description" content="Soluciones tecnológicas con precisión, eficiencia y compromiso.">
+  <meta property="og:image" content="https://anclatech.com/imagenes/logotipo.png">
+  <meta property="og:url" content="https://anclatech.com">
+  <meta name="theme-color" content="#003366">
+  <title>AnclaTech Solutions - Soluciones Tecnológicas Profesionales</title>
   <link rel="stylesheet" href="estilos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
   <header>
     <img src="imagenes/logotipo.png" alt="Logotipo de AnclaTech" class="logo animate-header">
     <h1 class="animate-header">AnclaTech Solutions</h1>
-    <button id="modoToggle" title="Cambiar modo claro/oscuro">🌓</button>
+    <button id="modoToggle" title="Cambiar modo claro/oscuro">&#127763;</button>
     <nav>
       <ul>
         <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="aviso-de-privacidad.html" target="_blank">Aviso de privacidad</a></li>
+        <li><a href="aviso-de-privacidad.html" target="_blank" rel="noopener">Aviso de privacidad</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="fade-in-on-scroll">
+  <main id="contenido" class="fade-in-on-scroll">
     <h2>Bienvenido a AnclaTech</h2>
     <p>Soluciones tecnológicas con precisión, eficiencia y compromiso.</p>
   </main>
+
   <section class="servicios-grid">
     <div class="servicio-card">
       <i class="fas fa-laptop-code"></i>
       <h2>Desarrollo Web</h2>
       <p>Sitios responsivos, funcionales y a medida.</p>
     </div>
-  
+
     <div class="servicio-card">
       <i class="fas fa-user-shield"></i>
       <h2>Protección de Datos</h2>
       <p>Asesoría legal-digital y cumplimiento normativo.</p>
     </div>
-  
+
     <div class="servicio-card">
       <i class="fas fa-rocket"></i>
       <h2>Despliegue & Hosting</h2>
@@ -50,9 +64,20 @@
   </footer>
 
   <!-- Botón flotante de WhatsApp -->
-  <a href="https://wa.me/3221932610" class="whatsapp-button" target="_blank" title="Contáctanos por WhatsApp">💬</a>
+  <a href="https://wa.me/3221932610" class="whatsapp-button" target="_blank" rel="noopener" title="Contáctanos por WhatsApp">&#128172;</a>
+
+  <!-- Banner de cookies -->
+  <div id="cookie-banner" class="cookie-banner" hidden>
+    <div class="cookie-inner">
+      <p>Usamos cookies para mejorar la experiencia. Al continuar, aceptas su uso.</p>
+      <div class="cookie-actions">
+        <a class="cookie-link" href="aviso-de-privacidad.html" target="_blank" rel="noopener">Ver aviso</a>
+        <button id="acceptCookies" class="btn-servicio" type="button">Aceptar</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Script principal -->
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

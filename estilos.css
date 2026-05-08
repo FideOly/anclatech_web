@@ -363,3 +363,217 @@ footer {
   .cookie-inner { flex-direction: column; align-items: flex-start; }
   .cookie-actions { width: 100%; justify-content: flex-start; }
 }
+
+/* --- Formulario de Contacto --- */
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body.modo-oscuro .contact-form {
+  background: #2a2a2a;
+  color: #f0f0f0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #003366;
+  font-size: 1rem;
+}
+
+body.modo-oscuro .form-group label {
+  color: #59aaff;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  color: #333;
+}
+
+body.modo-oscuro .form-group input,
+body.modo-oscuro .form-group textarea {
+  background: #1e1e1e;
+  color: #f0f0f0;
+  border-color: #444;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #003366;
+  box-shadow: 0 0 8px rgba(0, 51, 102, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form .btn-servicio {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.contact-form .aviso {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+body.modo-oscuro .contact-form .aviso {
+  color: #ccc;
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+}
+
+/* --- Lista de servicios en tarjetas --- */
+.servicio-lista {
+  list-style: none;
+  text-align: left;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.servicio-lista li {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.servicio-lista li i {
+  color: #25D366;
+  font-size: 0.9rem;
+}
+
+body.modo-oscuro .servicio-lista li {
+  color: #ccc;
+}
+
+/* --- Sección Por qué elegirnos --- */
+.porque-elegirnos {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #003366, #005599);
+  color: white;
+  margin-top: 2rem;
+}
+
+.porque-elegirnos h2 {
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.beneficio {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.beneficio i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffbf47;
+}
+
+.beneficio h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.beneficio p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* --- Sección CTA --- */
+.cta-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+}
+
+body.modo-oscuro .cta-section {
+  background: #2a2a2a;
+}
+
+.cta-section h2 {
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+body.modo-oscuro .cta-section p {
+  color: #ccc;
+}
+
+.btn-grande {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+}
+
+/* --- Mejoras para tarjetas de servicio --- */
+.servicio-card h3 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+body.modo-oscuro .servicio-card {
+  background: #2a2a2a;
+}
+
+body.modo-oscuro .servicio-card h3 {
+  color: #59aaff;
+}
+
+.servicio-card .btn-servicio {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 1rem;
+}

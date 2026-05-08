@@ -1,0 +1,47 @@
+# Configuración de Netlify para AnclaTech Solutions
+
+[build]
+  publish = "."
+  command = "echo 'AnclaTech Solutions - Listo para despliegue'"
+
+[build.environment]
+  # Variables de entorno
+  NODE_VERSION = "18"
+
+# ⚠️ IMPORTANTE: Las claves de seguridad (RECAPTCHA_SECRET, FORMSPREE_ENDPOINT)
+# se deben agregar SOLO en el dashboard de Netlify, no en este archivo.
+# Dashboard > Site Settings > Build & Deploy > Environment Variables
+# Consulta .env.example para ver qué variables configurar.
+
+# Redirects y reescrituras
+# Nota: No se necesitan redirects para sitios estáticos con archivos HTML directos
+# Los archivos servicios.html, contacto.html, etc. se sirven directamente
+
+# Headers personalizados
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "*.html"
+  [headers.values]
+    Cache-Control = "max-age=0, no-cache, no-store, must-revalidate"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.{png,jpg,jpeg,gif,svg,webp}"
+  [headers.values]
+    Cache-Control = "max-age=31536000, immutable"

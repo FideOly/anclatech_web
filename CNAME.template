@@ -3,3 +3,12 @@
 # anclatech.com
 
 # tudominio.com
+
+# Instrucciones:
+# 1) Renombra este archivo a `CNAME` (sin extensión) cuando tengas tu dominio.
+# 2) Reemplaza `tudominio.com` por tu dominio real (por ejemplo: anclatech.com).
+# 3) Si despliegas en Netlify, sube el archivo `CNAME` a la raíz del sitio o configura
+#    el dominio desde el dashboard de Netlify.
+
+# Ejemplo:
+# anclatech.com

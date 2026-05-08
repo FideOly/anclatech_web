@@ -1,52 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicios | AnclaTech</title>
-  <link rel="stylesheet" href="estilos.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicios de AnclaTech Solutions: Desarrollo web responsivo, protección de datos y despliegue profesional. Transformamos tu negocio digitalmente.">
+  <meta name="keywords" content="desarrollo web, protección de datos, hosting, soluciones tecnológicas">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Servicios - AnclaTech Solutions">
+  <meta property="og:description" content="Descubre nuestros servicios de desarrollo web, protección de datos y hosting.">
+  <meta property="og:image" content="https://anclatech.com/imagenes/logotipo.png">
+  <meta name="theme-color" content="#003366">
+  <title>Servicios Tecnológicos | AnclaTech Solutions</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
   <header>
     <img src="imagenes/logotipo.png" alt="Logotipo de AnclaTech" class="logo animate-header">
-    <h1>Servicios</h1>
-    <p>Soluciones digitales diseñadas para avanzar contigo.</p>
+    <h1 class="animate-header">AnclaTech Solutions</h1>
+    <button id="modoToggle" title="Cambiar modo claro/oscuro">&#127763;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="aviso-de-privacidad.html" target="_blank" rel="noopener">Aviso de privacidad</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
+  <main id="contenido">
     <section class="servicios">
       <h2>Nuestros Servicios</h2>
-      <p>Descubre cómo podemos ayudarte a transformar tu negocio con nuestras soluciones tecnológicas.</p>
+      <p>Descubre cómo podemos ayudarte a transformar tu negocio con nuestras soluciones tecnológicas profesionales desde Puerto Vallarta.</p>
+      
       <div class="servicios-grid">
-        <!-- Tarjeta 1 -->
-        <div class="servicio-card">
+        <!-- Servicio 1: Desarrollo Web -->
+        <div class="servicio-card fade-in-on-scroll">
           <i class="fas fa-laptop-code"></i>
-          <h2>Desarrollo Web</h2>
-          <p>Sitios responsivos, funcionales y con diseño a medida.</p>
-          <button class="btn-servicio">Más información</button>
+          <h3>Desarrollo Web</h3>
+          <p>Creamos sitios web modernos, responsivos y optimizados para todos los dispositivos.</p>
+          <ul class="servicio-lista">
+            <li><i class="fas fa-check"></i> Diseño personalizado y único</li>
+            <li><i class="fas fa-check"></i> Optimización SEO incluida</li>
+            <li><i class="fas fa-check"></i> Compatible con móviles y tablets</li>
+            <li><i class="fas fa-check"></i> Velocidad de carga optimizada</li>
+            <li><i class="fas fa-check"></i> Integración con redes sociales</li>
+          </ul>
+          <a href="contacto.html" class="btn-servicio">Solicitar Cotización</a>
         </div>
-        <!-- Tarjeta 2 -->
-        <div class="servicio-card">
+
+        <!-- Servicio 2: Protección de Datos -->
+        <div class="servicio-card fade-in-on-scroll">
           <i class="fas fa-user-shield"></i>
-          <h2>Protección de Datos</h2>
-          <p>Asesoría legal-digital y cumplimiento de normativas.</p>
-          <button class="btn-servicio">Más información</button>
+          <h3>Protección de Datos</h3>
+          <p>Asesoría legal-digital para cumplir con normativas de privacidad y protección de datos.</p>
+          <ul class="servicio-lista">
+            <li><i class="fas fa-check"></i> Avisos de privacidad personalizados</li>
+            <li><i class="fas fa-check"></i> Cumplimiento LFPDPPP</li>
+            <li><i class="fas fa-check"></i> Políticas de cookies</li>
+            <li><i class="fas fa-check"></i> Consentimiento informado</li>
+            <li><i class="fas fa-check"></i> Auditoría de seguridad</li>
+          </ul>
+          <a href="contacto.html" class="btn-servicio">Solicitar Asesoría</a>
         </div>
-        <!-- Tarjeta 3 -->
-        <div class="servicio-card">
+
+        <!-- Servicio 3: Despliegue & Hosting -->
+        <div class="servicio-card fade-in-on-scroll">
           <i class="fas fa-rocket"></i>
-          <h2>Despliegue & Hosting</h2>
-          <p>Publicación y soporte técnico en GitHub Pages o servidores privados.</p>
-          <button class="btn-servicio">Más información</button>
+          <h3>Despliegue & Hosting</h3>
+          <p>Publicación profesional de tu sitio web con soporte técnico continuo.</p>
+          <ul class="servicio-lista">
+            <li><i class="fas fa-check"></i> Hosting en servidores seguros</li>
+            <li><i class="fas fa-check"></i> Certificado SSL gratuito</li>
+            <li><i class="fas fa-check"></i> Dominio personalizado</li>
+            <li><i class="fas fa-check"></i> Copias de seguridad automáticas</li>
+            <li><i class="fas fa-check"></i> Soporte técnico 24/7</li>
+          </ul>
+          <a href="contacto.html" class="btn-servicio">Contratar Hosting</a>
+        </div>
+
+        <!-- Servicio 4: Mantenimiento Web -->
+        <div class="servicio-card fade-in-on-scroll">
+          <i class="fas fa-tools"></i>
+          <h3>Mantenimiento Web</h3>
+          <p>Mantén tu sitio web actualizado, seguro y funcionando al máximo rendimiento.</p>
+          <ul class="servicio-lista">
+            <li><i class="fas fa-check"></i> Actualizaciones de seguridad</li>
+            <li><i class="fas fa-check"></i> Corrección de errores</li>
+            <li><i class="fas fa-check"></i> Optimización de rendimiento</li>
+            <li><i class="fas fa-check"></i> Monitoreo continuo</li>
+            <li><i class="fas fa-check"></i> Reportes mensuales</li>
+          </ul>
+          <a href="contacto.html" class="btn-servicio">Solicitar Mantenimiento</a>
+        </div>
+
+        <!-- Servicio 5: Consultoría Digital -->
+        <div class="servicio-card fade-in-on-scroll">
+          <i class="fas fa-lightbulb"></i>
+          <h3>Consultoría Digital</h3>
+          <p>Te ayudamos a definir la mejor estrategia digital para tu negocio.</p>
+          <ul class="servicio-lista">
+            <li><i class="fas fa-check"></i> Análisis de necesidades</li>
+            <li><i class="fas fa-check"></i> Estrategia de presencia online</li>
+            <li><i class="fas fa-check"></i> Recomendaciones personalizadas</li>
+            <li><i class="fas fa-check"></i> Plan de implementación</li>
+            <li><i class="fas fa-check"></i> Seguimiento de resultados</li>
+          </ul>
+          <a href="contacto.html" class="btn-servicio">Agendar Consulta</a>
+        </div>
+
+        <!-- Servicio 6: E-commerce -->
+        <div class="servicio-card fade-in-on-scroll">
+          <i class="fas fa-shopping-cart"></i>
+          <h3>Tiendas en Línea</h3>
+          <p>Desarrollamos tu tienda virtual para vender productos y servicios en internet.</p>
+          <ul class="servicio-lista">
+            <li><i class="fas fa-check"></i> Catálogo de productos</li>
+            <li><i class="fas fa-check"></i> Carrito de compras</li>
+            <li><i class="fas fa-check"></i> Pasarelas de pago seguras</li>
+            <li><i class="fas fa-check"></i> Gestión de inventario</li>
+            <li><i class="fas fa-check"></i> Panel de administración</li>
+          </ul>
+          <a href="contacto.html" class="btn-servicio">Crear Mi Tienda</a>
         </div>
       </div>
+    </section>
+
+    <!-- Sección de Por qué elegirnos -->
+    <section class="porque-elegirnos fade-in-on-scroll">
+      <h2>¿Por qué elegir AnclaTech?</h2>
+      <div class="beneficios-grid">
+        <div class="beneficio">
+          <i class="fas fa-medal"></i>
+          <h4>Calidad Garantizada</h4>
+          <p>Entregamos proyectos de alta calidad con atención al detalle.</p>
+        </div>
+        <div class="beneficio">
+          <i class="fas fa-clock"></i>
+          <h4>Entregas a Tiempo</h4>
+          <p>Cumplimos con los plazos acordados sin comprometer la calidad.</p>
+        </div>
+        <div class="beneficio">
+          <i class="fas fa-headset"></i>
+          <h4>Soporte Continuo</h4>
+          <p>Te acompañamos después de la entrega con soporte técnico.</p>
+        </div>
+        <div class="beneficio">
+          <i class="fas fa-dollar-sign"></i>
+          <h4>Precios Competitivos</h4>
+          <p>Ofrecemos soluciones profesionales a precios accesibles.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Llamada a la acción -->
+    <section class="cta-section fade-in-on-scroll">
+      <h2>¿Listo para comenzar tu proyecto?</h2>
+      <p>Contáctanos hoy y recibe una cotización personalizada sin compromiso.</p>
+      <a href="contacto.html" class="btn-servicio btn-grande">Contactar Ahora</a>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 AnclaTech Solutions. Todos los derechos reservados.</p>
+    <p>&copy; 2025 AnclaTech Solutions. Todos los derechos reservados.</p>
   </footer>
-  <script src="scripts.js"></script>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/3221932610" class="whatsapp-button" target="_blank" rel="noopener" title="Contáctanos por WhatsApp">&#128172;</a>
+
+  <!-- Banner de cookies -->
+  <div id="cookie-banner" class="cookie-banner" hidden>
+    <div class="cookie-inner">
+      <p>Usamos cookies para mejorar la experiencia. Al continuar, aceptas su uso.</p>
+      <div class="cookie-actions">
+        <a class="cookie-link" href="aviso-de-privacidad.html" target="_blank" rel="noopener">Ver aviso</a>
+        <button id="acceptCookies" class="btn-servicio" type="button">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
